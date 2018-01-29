@@ -225,8 +225,9 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
         return nombrecompleto;
     }
 
-    public void setNombrecompleto(String nombrecompleto) {
-        this.nombrecompleto = nombrecompleto;
+     @Override
+    public void ComputeCalculatedFields() {
+        this.nombrecompleto = this.nombre + " " + this.primer_apellido + " " + this.segundo_apellido;
     }
 
     public String getNombre() {
