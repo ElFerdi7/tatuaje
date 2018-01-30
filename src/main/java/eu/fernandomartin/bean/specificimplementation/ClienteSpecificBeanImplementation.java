@@ -93,11 +93,12 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             LongName = "Dni Completo",
             Description = "Documento Nacional de Identidad",
             Type = EnumHelper.FieldType.String,
-            IsForeignKeyDescriptor = true,
+            IsForeignKeyDescriptor = false,
             RegexPattern = RegexConstants.dni,
             RegexHelp = RegexConstants.dni_Help,
             Width = 3,
-            MaxLength = 100
+            MaxLength = 100,
+            IsVisible = false
     )
     private String dni;
 
@@ -180,7 +181,7 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100,
-            IsVisible = false
+            IsVisible = true
     )
     private String provincia;
 
@@ -204,11 +205,11 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             LongName = "Teléfono",
             Description = "Teléfono del cliente",
             Type = EnumHelper.FieldType.String,
-            IsRequired = false,
+            IsRequired = true,
             IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 20,
-            IsVisible = false
+            IsVisible = true
     )
     private String telefono;
 
@@ -217,7 +218,8 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             ShortName = "Desc.",
             LongName = "Descuento",
             Description = "Descuento para el cliente",
-            Type = EnumHelper.FieldType.Decimal
+            Type = EnumHelper.FieldType.Decimal,
+            IsVisible = true
     )
     private Double descuento;
 

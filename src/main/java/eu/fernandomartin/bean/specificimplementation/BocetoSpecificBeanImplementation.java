@@ -32,9 +32,7 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             LongName = "Enlace",
             Description = "Imágen",
             Type = EnumHelper.FieldType.String,
-            IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
+            IsRequired = true,        
             IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100
@@ -47,10 +45,10 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             LongName = "Descripción",
             Description = "Descripción de la imágen",
             Type = EnumHelper.FieldType.String,
-            IsRequired = true,
+            IsRequired = false,
             RegexPattern = RegexConstants.capitalizedName,
             RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )
@@ -79,7 +77,8 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Precio",
             LongName = "Precio",
             Description = "Precio del tatuaje de la imágen",
-            Type = EnumHelper.FieldType.Decimal
+            Type = EnumHelper.FieldType.Decimal,
+            IsRequired = true
     )
     private Double precio;
 

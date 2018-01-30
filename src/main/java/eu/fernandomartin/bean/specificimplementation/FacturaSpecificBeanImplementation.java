@@ -58,7 +58,7 @@ public class FacturaSpecificBeanImplementation extends TableGenericBeanImplement
             IsRequired = true,
             RegexPattern = RegexConstants.capitalizedName,
             RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )
@@ -71,9 +71,7 @@ public class FacturaSpecificBeanImplementation extends TableGenericBeanImplement
             Description = "Fecha de la factura",
             Type = EnumHelper.FieldType.Date,
             IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )
@@ -84,7 +82,9 @@ public class FacturaSpecificBeanImplementation extends TableGenericBeanImplement
             ShortName = "Importe",
             LongName = "Importe",
             Description = "Importe del servicio",
-            Type = EnumHelper.FieldType.Decimal
+            Type = EnumHelper.FieldType.Decimal,
+            IsRequired = true,
+            IsForeignKeyDescriptor = true
     )
     private Double importe;
 

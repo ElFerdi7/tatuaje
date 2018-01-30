@@ -35,8 +35,6 @@ public class GaleriaSpecificBeanImplementation extends TableGenericBeanImplement
             Description = "Foto",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
             IsForeignKeyDescriptor = true,
             Width = 3,
             MaxLength = 100
@@ -49,10 +47,8 @@ public class GaleriaSpecificBeanImplementation extends TableGenericBeanImplement
             LongName = "Fecha",
             Description = "Fecha de la foto",
             Type = EnumHelper.FieldType.Date,
-            IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsRequired = false,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )

@@ -67,10 +67,8 @@ public class SesionSpecificBeanImplementation extends TableGenericBeanImplementa
             LongName = "Fecha inicio",
             Description = "Fecha de inicio de la primera sesion",
             Type = EnumHelper.FieldType.Date,
-            IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsRequired = false,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )
@@ -82,10 +80,8 @@ public class SesionSpecificBeanImplementation extends TableGenericBeanImplementa
             LongName = "Fecha fin",
             Description = "Fecha de fin de la ultima sesion",
             Type = EnumHelper.FieldType.Date,
-            IsRequired = true,
-            RegexPattern = RegexConstants.capitalizedName,
-            RegexHelp = RegexConstants.capitalizedName_Help,
-            IsForeignKeyDescriptor = true,
+            IsRequired = false,
+            IsForeignKeyDescriptor = false,
             Width = 3,
             MaxLength = 100
     )
@@ -97,7 +93,8 @@ public class SesionSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Cant.",
             LongName = "Cantidad",
             Description = "Cantidad de sesiones",
-            Type = EnumHelper.FieldType.Integer
+            Type = EnumHelper.FieldType.Integer,
+            IsRequired = true
     )
     private Integer cantidad;
 

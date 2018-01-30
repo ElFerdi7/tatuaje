@@ -144,26 +144,9 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
             RegexPattern = RegexConstants.email,
             RegexHelp = RegexConstants.email_Help,
             MaxLength = 50,
-            IsVisible = false
+            IsVisible = true
     )
     private String email;
-
-//    @Expose(serialize = false)
-//    @MetaPropertyBeanInterface(
-//            Type = EnumHelper.FieldType.Token
-//    )
-//    private String token;
-
-//    @Expose
-//    @MetaPropertyBeanInterface(
-//            ShortName = "¿Activo?",
-//            LongName = "¿Usuario activo?",
-//            Description = "¿Usuario activo?",
-//            Type = EnumHelper.FieldType.Boolean,
-//            IsRequired = true,
-//            IsVisible = false
-//    )
-//    private Integer activo;
 
     @Expose
     @MetaPropertyBeanInterface(
@@ -176,18 +159,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
             IsVisible = false
     )
     private Date fecha_alta;
-
-//    @Expose
-//    @MetaPropertyBeanInterface(
-//            ShortName = "¿Validado?",
-//            LongName = "¿Usuario validado?",
-//            Description = "¿Usuario validado?",
-//            Type = EnumHelper.FieldType.Boolean,
-//            IsRequired = true,
-//            IsVisible = false
-//    )
-//    private Integer validado;
-
+    
     @Expose(serialize = false)
     @MetaPropertyBeanInterface(
             Type = EnumHelper.FieldType.ForeignId
