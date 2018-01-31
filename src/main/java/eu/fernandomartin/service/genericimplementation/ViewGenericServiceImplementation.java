@@ -58,9 +58,7 @@ public abstract class ViewGenericServiceImplementation extends MetaGenericServic
         super(request);
     }
 
-    /*
-    * http://127.0.0.1:8081/trolleyes-server/json?ob=xxxxxx&op=getpage&np=1&rpp=10
-     */
+
     @Override
     public ReplyBeanHelper getPage() throws Exception {
         if (this.checkPermission("getpage")) {
@@ -99,9 +97,6 @@ public abstract class ViewGenericServiceImplementation extends MetaGenericServic
         }
     }
 
-    /*
-    * http://127.0.0.1:8081/trolleyes-server/json?ob=xxxxxxxx&op=getcount
-     */
     @Override
     public ReplyBeanHelper getCount() throws Exception {
         if (this.checkPermission("getcount")) {
