@@ -34,9 +34,7 @@ public class ServicioSpecificServiceImplementation extends TableGenericServiceIm
             if (idTipousuario == 1) {
                 return true;
             } else {
-                if (idTipousuario == 3
-                        || idTipousuario == 4
-                        || idTipousuario == 5) {
+                if (idTipousuario == 2) {
 
                     switch (strMethod) {
                         case "getmetadata":
@@ -48,7 +46,7 @@ public class ServicioSpecificServiceImplementation extends TableGenericServiceIm
                         case "get":
                             return true;
                         case "set":
-                            return false;
+                            return true;
                         case "remove":
                             return false;
                         case "getpage":

@@ -59,9 +59,7 @@ public class TipopagoSpecificServiceImplementation extends TableGenericServiceIm
             if (idTipousuario == 1) {
                 return true;
             } else {
-                if (idTipousuario == 3
-                        || idTipousuario == 4
-                        || idTipousuario == 5) {
+                if (idTipousuario == 2) {
 
                     switch (strMethod) {
                         case "getmetadata":
