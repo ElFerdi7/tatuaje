@@ -222,6 +222,16 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             IsVisible = true
     )
     private Double descuento;
+    
+    @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Servicio",
+            LongName = "Servicios de este cliente",
+            Description = "Servicios de este cliente",
+            Type = EnumHelper.FieldType.Link,
+            References = "servicio"
+    )
+    private Integer link_servicio = null;
 
     public String getNombrecompleto() {
         return nombrecompleto;

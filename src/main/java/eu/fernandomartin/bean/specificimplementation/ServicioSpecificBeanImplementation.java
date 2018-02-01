@@ -94,6 +94,36 @@ public class ServicioSpecificBeanImplementation extends TableGenericBeanImplemen
             Width = 4
     )
     private MetaBeanHelper obj_usuario = null;
+    
+    @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Sesion",
+            LongName = "Sesiones de este servicio",
+            Description = "Sesiones de este servicio",
+            Type = EnumHelper.FieldType.Link,
+            References = "sesion"
+    )
+    private Integer link_sesion = null;
+    
+     @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Boceto",
+            LongName = "Bocetos de este servicio",
+            Description = "Bocetos de este servicio",
+            Type = EnumHelper.FieldType.Link,
+            References = "boceto"
+    )
+    private Integer link_boceto = null;
+     
+      @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Galeria",
+            LongName = "Galerias de este servicio",
+            Description = "Galerias de este servicio",
+            Type = EnumHelper.FieldType.Link,
+            References = "galeria"
+    )
+    private Integer link_galeria = null;
 
     public String getComentario() {
         return comentario;

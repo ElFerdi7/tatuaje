@@ -60,6 +60,16 @@ public class TipopagoSpecificBeanImplementation extends TableGenericBeanImplemen
             IsForeignKeyDescriptor = true
     )
     private String descripcion = "";
+    
+    @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Clientes",
+            LongName = "Clientes de este tipo de pago",
+            Description = "Clientes de este tipo de pago",
+            Type = EnumHelper.FieldType.Link,
+            References = "cliente"
+    )
+    private Integer link_cliente = null;
  
     public TipopagoSpecificBeanImplementation() {
     }

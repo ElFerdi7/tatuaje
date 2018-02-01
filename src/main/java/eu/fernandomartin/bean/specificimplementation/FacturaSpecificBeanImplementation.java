@@ -87,6 +87,16 @@ public class FacturaSpecificBeanImplementation extends TableGenericBeanImplement
             IsForeignKeyDescriptor = true
     )
     private Double importe;
+    
+     @Expose(deserialize = false)
+    @MetaPropertyBeanInterface(
+            ShortName = "Servicio",
+            LongName = "Servicios de esta factura",
+            Description = "Servicios de esta factura",
+            Type = EnumHelper.FieldType.Link,
+            References = "servicio"
+    )
+    private Integer link_servicio = null;
 
     public Date getFecha_factura() {
         return fecha_factura;
