@@ -71,7 +71,7 @@ public class TipopagoSpecificServiceImplementation extends TableGenericServiceIm
                         case "get":
                             return true;
                         case "set":
-                            return true;
+                            return false;
                         case "remove":
                             return false;
                         case "getpage":

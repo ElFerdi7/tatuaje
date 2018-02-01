@@ -69,7 +69,7 @@ public class TipousuarioSpecificServiceImplementation extends TableGenericServic
                         case "get":
                             return true;
                         case "set":
-                            return true;
+                            return false;
                         case "remove":
                             return false;
                         case "getpage":
