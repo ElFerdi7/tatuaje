@@ -43,8 +43,8 @@ public class TipousuarioSpecificServiceImplementation extends TableGenericServic
     public TipousuarioSpecificServiceImplementation(HttpServletRequest request) {
         super(request);
     }
-    
-     @Override
+
+    @Override
     protected Boolean checkPermission(String strMethodName) {
         MetaBeanHelper oUsuarioBean = (MetaBeanHelper) oRequest.getSession().getAttribute("user");
         if (oUsuarioBean != null) {
@@ -75,6 +75,10 @@ public class TipousuarioSpecificServiceImplementation extends TableGenericServic
                         case "getpage":
                             return true;
                         case "getcount":
+                            return true;
+                        case "getpagex":
+                            return true;
+                        case "getcountx":
                             return true;
                     }
                 } else {

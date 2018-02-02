@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
  * @author Fernando
  */
 public class SesionSpecificServiceImplementation extends TableGenericServiceImplementation {
-    
-      public SesionSpecificServiceImplementation(HttpServletRequest request) {
+
+    public SesionSpecificServiceImplementation(HttpServletRequest request) {
         super(request);
     }
 
@@ -52,6 +52,10 @@ public class SesionSpecificServiceImplementation extends TableGenericServiceImpl
                         case "getpage":
                             return true;
                         case "getcount":
+                            return true;
+                        case "getpagex":
+                            return true;
+                        case "getcountx":
                             return true;
                     }
                 } else {

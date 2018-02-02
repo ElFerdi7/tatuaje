@@ -53,6 +53,10 @@ public class ServicioSpecificServiceImplementation extends TableGenericServiceIm
                             return true;
                         case "getcount":
                             return true;
+                        case "getpagex":
+                            return true;
+                        case "getcountx":
+                            return true;
                     }
                 } else {
                     return false;
