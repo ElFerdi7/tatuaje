@@ -56,9 +56,7 @@ public abstract class TableGenericServiceImplementation extends ViewGenericServi
         super(request);
     }
 
-    /*
-    * http://127.0.0.1:8081/trolleyes-server/json?ob=xxxxxx&op=get&id=n
-     */
+
     @Override
     public ReplyBeanHelper get() throws Exception {
         if (this.checkPermission("get")) {
@@ -91,9 +89,7 @@ public abstract class TableGenericServiceImplementation extends ViewGenericServi
         }
     }
 
-    /*
-    * http://127.0.0.1:8081/trolleyes-server/json?ob=xxxxxx&op=set (datos aparte)
-     */
+  
     private ReplyBeanHelper setoBean(TableGenericBeanImplementation oBean) throws Exception {
         Connection oConnection = null;
         ConnectionInterface oPooledConnection = null;
@@ -141,9 +137,7 @@ public abstract class TableGenericServiceImplementation extends ViewGenericServi
         }
     }
 
-    /*
-    * http://127.0.0.1:8081/trolleyes-server/json?ob=xxxxxxx&op=remove&id=1
-     */
+   
     @Override
     public ReplyBeanHelper remove() throws Exception {
         if (this.checkPermission("remove")) {
