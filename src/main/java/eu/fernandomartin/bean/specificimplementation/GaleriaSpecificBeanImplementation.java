@@ -33,10 +33,11 @@ public class GaleriaSpecificBeanImplementation extends TableGenericBeanImplement
             ShortName = "Enlace",
             LongName = "Enlace",
             Description = "Foto",
-            Type = EnumHelper.FieldType.String,
+            Type = EnumHelper.FieldType.Enlace,
             IsRequired = true,
             IsForeignKeyDescriptor = true,
             Width = 3,
+            IsVisible = true,
             MaxLength = 100
     )
     private String enlace;

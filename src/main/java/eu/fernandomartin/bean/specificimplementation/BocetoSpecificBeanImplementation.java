@@ -31,10 +31,11 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Enlace",
             LongName = "Enlace",
             Description = "Imágen",
-            Type = EnumHelper.FieldType.String,
+            Type = EnumHelper.FieldType.Enlace,
             IsRequired = true,        
             IsForeignKeyDescriptor = true,
             Width = 3,
+            IsVisible = true,
             MaxLength = 100
     )
     private String enlace;
