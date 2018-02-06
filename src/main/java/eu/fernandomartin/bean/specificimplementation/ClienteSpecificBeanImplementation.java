@@ -77,7 +77,7 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
             LongName = "Segundo Apellido",
             Description = "Segundo Apellido del cliente",
             Type = EnumHelper.FieldType.String,
-            IsRequired = true,
+            IsRequired = false,
             RegexPattern = RegexConstants.capitalizedName,
             RegexHelp = RegexConstants.capitalizedName_Help,
             IsForeignKeyDescriptor = false,
@@ -238,8 +238,12 @@ public class ClienteSpecificBeanImplementation extends TableGenericBeanImplement
     }
 
      @Override
-    public void ComputeCalculatedFields() {
-        this.nombrecompleto = this.nombre + " " + this.primer_apellido + " " + this.segundo_apellido;
+     public void ComputeCalculatedFields() {
+        if (this.segundo_apellido == null) {
+            this.nombrecompleto = this.nombre + " " + this.primer_apellido;
+        } else {
+            this.nombrecompleto = this.nombre + " " + this.primer_apellido + " " + this.segundo_apellido;
+        }
     }
 
     public String getNombre() {

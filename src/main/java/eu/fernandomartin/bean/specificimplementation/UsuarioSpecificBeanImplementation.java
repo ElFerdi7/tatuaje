@@ -105,7 +105,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
             LongName = "Segundo Apellido",
             Description = "Segundo Apellido del usuario",
             Type = EnumHelper.FieldType.String,
-            IsRequired = true,
+            IsRequired = false,
             RegexPattern = RegexConstants.capitalizedName,
             RegexHelp = RegexConstants.capitalizedName_Help,
             IsForeignKeyDescriptor = false,
@@ -159,7 +159,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
             IsVisible = false
     )
     private Date fecha_alta;
-    
+
     @Expose(serialize = false)
     @MetaPropertyBeanInterface(
             Type = EnumHelper.FieldType.ForeignId
@@ -176,7 +176,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
             Width = 4
     )
     private MetaBeanHelper obj_tipousuario = null;
-    
+
     @Expose(deserialize = false)
     @MetaPropertyBeanInterface(
             ShortName = "Servicios del usuario",
@@ -187,13 +187,13 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
     )
     private Integer link_servicio = null;
 
-  
-
-    
-
     @Override
     public void ComputeCalculatedFields() {
-        this.nombrecompleto = this.nombre + " " + this.primer_apellido + " " + this.segundo_apellido;
+        if (this.segundo_apellido == null) {
+            this.nombrecompleto = this.nombre + " " + this.primer_apellido;
+        } else {
+            this.nombrecompleto = this.nombre + " " + this.primer_apellido + " " + this.segundo_apellido;
+        }
     }
 
     public String getNombrecompleto() {
@@ -255,7 +255,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
     public void setFecha_alta(Date fecha_alta) {
         this.fecha_alta = fecha_alta;
     }
-    
+
     public Integer getId_tipousuario() {
         return id_tipousuario;
     }
@@ -271,8 +271,7 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
     public void setObj_tipousuario(MetaBeanHelper obj_tipousuario) {
         this.obj_tipousuario = obj_tipousuario;
     }
-    
-    
+
 //    @Override
 //    public UsuarioSpecificBeanImplementation fill(ResultSet oResultSet, Connection oConnection, MetaBeanHelper oPuserBean_security, Integer expand) throws Exception {
 //        super.fill(oResultSet, oConnection, oPuserBean_security, expand);
@@ -310,5 +309,4 @@ public class UsuarioSpecificBeanImplementation extends TableGenericBeanImplement
 //        }
 //        return this;
 //    }
-
 }
