@@ -32,7 +32,7 @@ public class SesionSpecificBeanImplementation extends TableGenericBeanImplementa
     @MetaPropertyBeanInterface(
             ShortName = "Descripción",
             LongName = "Descripción",
-            Description = "Descripción de la foto",
+            Description = "Descripción de la sesion",
             Type = EnumHelper.FieldType.String,
             IsRequired = true,
             RegexPattern = RegexConstants.capitalizedName,
