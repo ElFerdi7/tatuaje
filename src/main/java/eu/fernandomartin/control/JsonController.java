@@ -85,7 +85,7 @@ public class JsonController extends HttpServlet {
                 response.setContentType("text/html;charset=UTF-8");
                 out.println("<!DOCTYPE html>");
                 out.println("<html>");
-                out.println("<head><title>TATUAJE server</title><link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\"></head>");
+                out.println("<head><title>TATUAJE server</title><link rel=\"shortcut icon\" href=\"favicon2.ico\" type=\"image/x-icon\"></head>");
                 out.println("<body style=\"background: url(hytstudio.png) no-repeat center center fixed; background-repeat: no-repeat;background-size: 900px;\">");
                 out.println("<h1>Welcome to TATUAJE server</h1><h2>Servlet controller json listening at " + InetAddress.getLocalHost().getHostAddress() + ":" + request.getLocalPort() + request.getContextPath() + "</h2>");
                 out.println("version: " + ConfigurationConstants.version + " (" + ConfigurationConstants.versionDate + ")" + "<br>");
