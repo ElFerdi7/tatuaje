@@ -78,7 +78,7 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Precio",
             LongName = "Precio",
             Description = "Precio del tatuaje de la imágen",
-            Type = EnumHelper.FieldType.Decimal,
+            Type = EnumHelper.FieldType.Dinero,
             IsRequired = true
     )
     private Double precio;
