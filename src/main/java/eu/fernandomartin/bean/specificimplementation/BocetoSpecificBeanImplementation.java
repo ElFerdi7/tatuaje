@@ -31,12 +31,12 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Enlace",
             LongName = "Enlace",
             Description = "Imágen",
-            Type = EnumHelper.FieldType.Enlace,
-            IsRequired = true,        
+            Type = EnumHelper.FieldType.Enlace,      
             IsForeignKeyDescriptor = true,
-            Width = 3,
+            IsRequired = false,
             IsVisible = true,
-            MaxLength = 100
+            Width = 3,
+            MaxLength = 255
     )
     private String enlace;
 
@@ -78,7 +78,7 @@ public class BocetoSpecificBeanImplementation extends TableGenericBeanImplementa
             ShortName = "Precio",
             LongName = "Precio",
             Description = "Precio del tatuaje de la imágen",
-            Type = EnumHelper.FieldType.Dinero,
+            Type = EnumHelper.FieldType.Decimal,
             IsRequired = true
     )
     private Double precio;

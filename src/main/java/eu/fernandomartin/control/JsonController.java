@@ -41,17 +41,23 @@ import eu.fernandomartin.helper.Log4jHelper;
 import eu.fernandomartin.factory.ServiceFactory;
 import eu.fernandomartin.helper.EnumHelper.Environment;
 import static eu.fernandomartin.helper.ParameterHelper.prepareCamelCaseObject;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class JsonController extends HttpServlet {
 
@@ -67,6 +73,36 @@ public class JsonController extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, Exception {
+
+        response.setHeader("Access-Control-Allow-Origin", request.getHeader("origin"));
+//response.setHeader("Access-Control-Allow-Methods", "PATCH, POST, GET, PUT, OPTIONS, DELETE");
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+        response.setHeader("Access-Control-Max-Age", "86400");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Allow-Headers", "Origin, Accept, x-requested-with, Content-Type");
+
+        ////////////////////////////////
+        response.setContentType("text/html;charset=UTF-8");
+        String name = "";
+
+        //if (ServletFileUpload.isMultipartContent(request)) {
+        try {
+            List<FileItem> multiparts = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
+            for (FileItem item : multiparts) {
+                if (!item.isFormField()) {
+                    name = new File(item.getName()).getName();
+                    item.write(new File("//datos//usuarios//alumnos//a022583952e//lampstack-5.6.31-0//apache2//htdocs//proyecto//tatuaje-server//src//main//webapp//Imagenes//" + name));
+
+                } else {
+                }
+
+            }
+
+        } catch (Exception ex) {
+
+        }
+        //}
+
         ReplyBeanHelper oReplyBean = null;
         try (PrintWriter out = response.getWriter()) {
             try {
