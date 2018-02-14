@@ -91,7 +91,7 @@ public class JsonController extends HttpServlet {
             for (FileItem item : multiparts) {
                 if (!item.isFormField()) {
                     name = new File(item.getName()).getName();
-                    item.write(new File("//datos//usuarios//alumnos//a022583952e//lampstack-5.6.31-0//apache2//htdocs//proyecto//tatuaje-server//src//main//webapp//Imagenes//" + name));
+                    item.write(new File(".//..//webapps//images//" + name));
 
                 } else {
                 }

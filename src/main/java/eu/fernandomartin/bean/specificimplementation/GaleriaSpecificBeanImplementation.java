@@ -30,15 +30,15 @@ public class GaleriaSpecificBeanImplementation extends TableGenericBeanImplement
 
     @Expose
     @MetaPropertyBeanInterface(
-            ShortName = "Enlace",
+           ShortName = "Enlace",
             LongName = "Enlace",
             Description = "Foto",
-            Type = EnumHelper.FieldType.Enlace,
-            IsRequired = true,
+            Type = EnumHelper.FieldType.Enlace,      
             IsForeignKeyDescriptor = true,
-            Width = 3,
+            IsRequired = false,
             IsVisible = true,
-            MaxLength = 100
+            Width = 3,
+            MaxLength = 255
     )
     private String enlace;
 
