@@ -82,7 +82,7 @@ public class FacturaSpecificBeanImplementation extends TableGenericBeanImplement
             ShortName = "Importe",
             LongName = "Importe",
             Description = "Importe del servicio",
-            Type = EnumHelper.FieldType.Dinero,
+            Type = EnumHelper.FieldType.Decimal,
             IsRequired = true,
             IsForeignKeyDescriptor = true
     )
