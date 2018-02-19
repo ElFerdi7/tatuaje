@@ -48,7 +48,7 @@ public class ServicioSpecificServiceImplementation extends TableGenericServiceIm
                         case "set":
                             return true;
                         case "remove":
-                            return false;
+                            return true;
                         case "getpage":
                             return true;
                         case "getcount":

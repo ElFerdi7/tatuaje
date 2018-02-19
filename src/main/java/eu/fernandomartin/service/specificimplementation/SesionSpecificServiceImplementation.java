@@ -48,7 +48,7 @@ public class SesionSpecificServiceImplementation extends TableGenericServiceImpl
                         case "set":
                             return true;
                         case "remove":
-                            return false;
+                            return true;
                         case "getpage":
                             return true;
                         case "getcount":

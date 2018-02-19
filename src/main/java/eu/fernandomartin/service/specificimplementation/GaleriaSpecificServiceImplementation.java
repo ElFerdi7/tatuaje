@@ -48,7 +48,7 @@ public class GaleriaSpecificServiceImplementation extends TableGenericServiceImp
                         case "set":
                             return true;
                         case "remove":
-                            return false;
+                            return true;
                         case "getpage":
                             return true;
                         case "getcount":
